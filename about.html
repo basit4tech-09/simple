@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About — Simple</title>
+
+    <link rel="stylesheet" href="simple.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Simple</a>
+
+        <button
+          id="navToggle"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="mainNav"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          ☰
+        </button>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="about.html" aria-current="page" class="active">About</a>
+            </li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="join">
+        <article class="about-hero">
+          <h1>Our Story</h1>
+          <p>
+            What started as a kitchen experiment became a worldwide idea:
+            desserts that bring gentle nostalgia without weighing you down.
+          </p>
+        </article>
+        <img src="about.jpg" alt="About image — replace with your image" />
+      </div>
+      <!-- Add an about/team image at images/about-hero.jpg -->
+
+      <section class="mission">
+        <h2>Mission</h2>
+        <p>To make joy more frequent and calories less intimidating.</p>
+      </section>
+
+      <section class="process">
+        <h3>How we make it</h3>
+        <ul>
+          <li>
+            We craft recipes on flavor, then reduce calories without sacrificing
+            texture.
+          </li>
+          <li>We source where possible from trusted suppliers.</li>
+          <li>We test, refine, and scale to the shelves near you.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <a href="index.html" class="brand small">Simple</a>
+      <p class="muted">©<span id="yearAbout"></span> Simple</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

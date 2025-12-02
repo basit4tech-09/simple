@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Shop — Simple</title>
+    <link rel="stylesheet" href="simple.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Simple</a>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+              <a href="shop.html" aria-current="page" class="active">Shop</a>
+            </li>
+            <li><a href="privacy.html">Privacy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container shop-page">
+      <h1>Catalogue</h1>
+      <p class="lead">
+        Browse our low-calorie delights.<!--Replace the product images in /images/
+        and the descriptions below.-->
+      </p>
+
+      <div class="shop-controls">
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search products..."
+        />
+        <select id="sortSelect">
+          <option value="popular">Sort: Popular</option>
+          <option value="price-low">Price: Low &rarr; High</option>
+          <option value="price-high">Price: High &rarr; Low</option>
+        </select>
+      </div>
+
+      <section id="products" class="products-grid">
+        <!-- Sample product card -->
+        <article
+          class="product-card"
+          data-name="Cloudy Lemon Tart"
+          data-price="4.99"
+          data-desc="Savor the sunshine Cloudy Lemon Tart,a delightful play on texture and flavor"
+          data-img="tar.jpg"
+        >
+          <div class="product-image">
+            <!-- Replace with actual product image -->
+            <img src="tar.jpg" alt="Cloudy Lemon Tart — add product image" />
+          </div>
+          <div class="product-body">
+            <h3>Cloudy Lemon Tart</h3>
+            <p class="product-desc">
+              A light, lemony tart with a velvet finish — low-calorie.
+            </p>
+            <p class="product-price">₦4,990</p>
+            <div class="product-actions">
+              <button class="btn outline view-btn">Quick view</button>
+              <!--<button class="btn primary add-cart">Add to cart</button>-->
+            </div>
+          </div>
+        </article>
+
+        <!-- Duplicate product cards for layout; replace content as needed -->
+        <article
+          class="product-card"
+          data-name="Vanilla Memory Mousse"
+          data-price="5.99"
+          data-img="vanilla.jpg"
+          data-desc="Experience a taste of pure elegance with our Vanilla Memory Mousse
+          This French-inspired creation boasts a luxuriously light,memory foam,consistency that is both playful and redefined.."
+        >
+          <div class="product-image">
+            <img src="vanilla.jpg" alt="Vanilla Memory Mousse — add image" />
+          </div>
+          <div class="product-body">
+            <h3>Vanilla Memory Mousse</h3>
+            <p class="product-desc">
+              Silky mousse with nostalgic vanilla notes — guilt-free.
+            </p>
+            <p class="product-price">₦5,990</p>
+            <div class="product-actions">
+              <button class="btn outline view-btn">Quick view</button>
+              <!--<button class="btn primary add-cart">Add to cart</button>-->
+            </div>
+          </div>
+        </article>
+
+        <!-- Add more product-card elements as needed -->
+        <article
+          class="product-card"
+          data-name="Keylime pie"
+          data-price="6.99"
+          data-img="keylime.jpg"
+          data-desc="Indulge in a slice of the tropics with our classic Keylime pie, a true South Florida staple.it features a rich buttery graham cracker crust generously with a silky-smooth,pale yellow custard."
+        >
+          <div class="product-image">
+            <img src="keylime.jpg" alt="keylime pie" />
+          </div>
+          <div class="product-body">
+            <h3>Keylime Pie</h3>
+            <p class="product-desc">
+              "A delightful balance of tart and sweet,with a crisp graham
+              cracker crust and creamy lime filling".
+            </p>
+            <p class="product-price">₦6,990</p>
+            <div class="product-actions">
+              <button class="btn outline view-btn">Quick view</button>
+              <!--<button class="btn primary add-cart">Add to cart</button>-->
+            </div>
+          </div>
+        </article>
+
+        <!-- Add more product-card elements as needed -->
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <a href="index.html" class="brand small">Simple</a>
+      <p class="muted">© <span id="yearShop"></span> Simple</p>
+    </footer>
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <h2>Product name</h2>
+      </div>
+    </div>
+    <div id="quickModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+
+        <div class="modal-img">
+          <img src="" alt="" id="modalImg" />
+        </div>
+
+        <h2 id="modalName"></h2>
+        <p id="modalDesc"></p>
+        <p class="modal-price" id="modalPrice"></p>
+
+        <button class="btn primary add-cart">Add to cart</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

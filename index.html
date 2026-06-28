@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Simple — Low-Calorie Desserts</title>
-    <!-- Single external CSS -->
     <link rel="stylesheet" href="simple.css" />
     <meta
       name="description"
@@ -12,6 +11,7 @@
     />
   </head>
   <body>
+
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html">Simple</a>
@@ -28,7 +28,7 @@
 
         <nav id="mainNav" class="main-nav" aria-label="Main navigation">
           <ul>
-            <li><a href="index.html" class="active" id="ind">Home</a></li>
+            <li><a href="index.html" class="active" aria-current="page">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="privacy.html">Privacy</a></li>
@@ -38,6 +38,7 @@
     </header>
 
     <main>
+
       <!-- Hero -->
       <section class="hero">
         <div class="container hero-grid">
@@ -48,52 +49,44 @@
               who want indulgence without the heaviness.
             </p>
             <p>
-              <a class="btn primary" href="shop.html" id="viewCatalogueBtn"
-                >View Catalogue</a
-              >
+              <a class="btn primary" href="shop.html" id="viewCatalogueBtn">View Catalogue</a>
               <a class="btn ghost" href="#about-team">About the team</a>
             </p>
           </div>
-
           <div class="hero-image">
-            <!-- Add hero image: place an image at images/hero.jpg -->
-            <img src="simple2.png" alt="icecream" />
+            <img src="assets/images/simple2.png" alt="Simple — fruit parfait dessert" />
           </div>
         </div>
       </section>
 
       <!-- About the team -->
       <section id="about-team" class="about-team container">
-        <h2 id="about">About the Team</h2>
+        <h2>About the Team</h2>
         <p>
           We're a small team obsessed with texture and memory. We create dessert
-          experiences inspired by childhood treats—refined for grown-up
+          experiences inspired by childhood treats — refined for grown-up
           tastebuds, with fewer calories.
         </p>
-
         <div class="team-grid">
-          <!-- Reusable team card, replace src with your images -->
           <article class="team-card">
-            <img src="alice.jpg" alt="Alice" class="team-photo" />
+            <img src="assets/images/alice.jpg" alt="Alice" class="team-photo" />
             <h3>Alice</h3>
             <p>Head pastry chef — guardian of the secret recipe.</p>
           </article>
-
           <article class="team-card">
-            <img src="Alex.jpg" alt="Alex" class="team-photo" />
+            <img src="assets/images/Alex.jpg" alt="Alex" class="team-photo" />
             <h3>Alex</h3>
             <p>Product developer — balances flavor and calories.</p>
           </article>
-
           <article class="team-card">
-            <img src="mina.jpg" alt="Mina" class="team-photo" />
+            <img src="assets/images/mina.jpg" alt="Mina" class="team-photo" />
             <h3>Mina</h3>
             <p>Brand and distribution — gets Simple to stores worldwide.</p>
           </article>
         </div>
       </section>
 
-      <!-- Info / values -->
+      <!-- Values -->
       <section class="values container">
         <h2>Our Values</h2>
         <ul class="values-list">
@@ -103,7 +96,7 @@
         </ul>
       </section>
 
-      <!-- Newsletter / CTA -->
+      <!-- Newsletter -->
       <section class="newsletter container">
         <h2>Stay in the loop</h2>
         <p>Get product drops and special offers.</p>
@@ -119,33 +112,23 @@
           <button class="btn primary" type="submit">Subscribe</button>
         </form>
         <p class="muted">We won't spam — promises kept.</p>
-        <a href="mailto:basit4tech@gmail.com" class="btn primary">Contact Us</a>
+        <a href="mailto:basit4tech@gmail.com" target="_blankm" class="btn primary">Contact Us</a>
       </section>
+
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-left">
-          <a class="brand small" href="#ind">Back to the top</a>
+          <a class="brand small" href="#top">Back to the top</a>
           <p class="muted">Low-calorie desserts — crafted with care.</p>
         </div>
-
-        <!--<div class="footer-right">
-          nav aria-label="Footer navigation">
-            <ul class="footer-nav">
-              <li><a href="about.html">About</a></li>
-              <li><a href="shop.html">Shop</a></li>
-              <li><a href="privacy.html">Privacy</a></li>
-            </ul>
-          </nav>
-        </div>-->
       </div>
-      <small class="attribution container"
-        >© <span id="year"></span> simple. All rights reserved.</small
-      >
+      <small class="attribution container">
+        © <span id="year"></span> Simple. All rights reserved.
+      </small>
     </footer>
 
-    <!-- Single external JS -->
     <script src="script.js"></script>
   </body>
 </html>

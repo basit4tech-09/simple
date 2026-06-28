@@ -7,16 +7,28 @@
     <link rel="stylesheet" href="simple.css" />
   </head>
   <body>
+
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html">Simple</a>
-        <nav class="main-nav">
+
+        <!-- BUG FIX: nav toggle button was missing from shop.html -->
+        <button
+          id="navToggle"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="mainNav"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          ☰
+        </button>
+
+        <!-- BUG FIX: nav was missing id="mainNav" so toggle couldn't find it -->
+        <nav id="mainNav" class="main-nav" aria-label="Main navigation">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li>
-              <a href="shop.html" aria-current="page" class="active">Shop</a>
-            </li>
+            <li><a href="shop.html" class="active" aria-current="page">Shop</a></li>
             <li><a href="privacy.html">Privacy</a></li>
           </ul>
         </nav>
@@ -25,17 +37,10 @@
 
     <main class="container shop-page">
       <h1>Catalogue</h1>
-      <p class="lead">
-        Browse our low-calorie delights.<!--Replace the product images in /images/
-        and the descriptions below.-->
-      </p>
+      <p class="lead">Browse our low-calorie delights.</p>
 
       <div class="shop-controls">
-        <input
-          id="searchInput"
-          type="search"
-          placeholder="Search products..."
-        />
+        <input id="searchInput" type="search" placeholder="Search products..." />
         <select id="sortSelect">
           <option value="popular">Sort: Popular</option>
           <option value="price-low">Price: Low &rarr; High</option>
@@ -44,106 +49,89 @@
       </div>
 
       <section id="products" class="products-grid">
-        <!-- Sample product card -->
+
         <article
           class="product-card"
           data-name="Cloudy Lemon Tart"
           data-price="4.99"
-          data-desc="Savor the sunshine Cloudy Lemon Tart,a delightful play on texture and flavor"
+          data-desc="Savor the sunshine Cloudy Lemon Tart — a delightful play on texture and flavor."
           data-img="tar.jpg"
         >
           <div class="product-image">
-            <!-- Replace with actual product image -->
-            <img src="tar.jpg" alt="Cloudy Lemon Tart — add product image" />
+            <img src="assets/images/tar.jpg" alt="Cloudy Lemon Tart" />
           </div>
           <div class="product-body">
             <h3>Cloudy Lemon Tart</h3>
-            <p class="product-desc">
-              A light, lemony tart with a velvet finish — low-calorie.
-            </p>
+            <p class="product-desc">A light, lemony tart with a velvet finish — low-calorie.</p>
             <p class="product-price">₦4,990</p>
             <div class="product-actions">
               <button class="btn outline view-btn">Quick view</button>
-              <!--<button class="btn primary add-cart">Add to cart</button>-->
             </div>
           </div>
         </article>
 
-        <!-- Duplicate product cards for layout; replace content as needed -->
         <article
           class="product-card"
           data-name="Vanilla Memory Mousse"
           data-price="5.99"
-          data-img="vanilla.jpg"
-          data-desc="Experience a taste of pure elegance with our Vanilla Memory Mousse
-          This French-inspired creation boasts a luxuriously light,memory foam,consistency that is both playful and redefined.."
+          data-img="assets/images/vanilla.jpg"
+          data-desc="Experience a taste of pure elegance with our Vanilla Memory Mousse. A luxuriously light, memory-foam consistency that is both playful and refined."
         >
           <div class="product-image">
-            <img src="vanilla.jpg" alt="Vanilla Memory Mousse — add image" />
+            <img src="assets/images/vanilla.jpg" alt="Vanilla Memory Mousse" />
           </div>
           <div class="product-body">
             <h3>Vanilla Memory Mousse</h3>
-            <p class="product-desc">
-              Silky mousse with nostalgic vanilla notes — guilt-free.
-            </p>
+            <p class="product-desc">Silky mousse with nostalgic vanilla notes — guilt-free.</p>
             <p class="product-price">₦5,990</p>
             <div class="product-actions">
               <button class="btn outline view-btn">Quick view</button>
-              <!--<button class="btn primary add-cart">Add to cart</button>-->
             </div>
           </div>
         </article>
 
-        <!-- Add more product-card elements as needed -->
         <article
           class="product-card"
-          data-name="Keylime pie"
+          data-name="Keylime Pie"
           data-price="6.99"
-          data-img="keylime.jpg"
-          data-desc="Indulge in a slice of the tropics with our classic Keylime pie, a true South Florida staple.it features a rich buttery graham cracker crust generously with a silky-smooth,pale yellow custard."
+          data-img="assets/images/keylime.jpg"
+          data-desc="Indulge in a slice of the tropics with our classic Keylime Pie. A rich buttery graham cracker crust with a silky smooth, pale yellow custard."
         >
           <div class="product-image">
-            <img src="keylime.jpg" alt="keylime pie" />
+            <img src="assets/images/keylime.jpg" alt="Keylime Pie" />
           </div>
           <div class="product-body">
             <h3>Keylime Pie</h3>
-            <p class="product-desc">
-              "A delightful balance of tart and sweet,with a crisp graham
-              cracker crust and creamy lime filling".
-            </p>
+            <p class="product-desc">A delightful balance of tart and sweet, with a crisp graham cracker crust.</p>
             <p class="product-price">₦6,990</p>
             <div class="product-actions">
               <button class="btn outline view-btn">Quick view</button>
-              <!--<button class="btn primary add-cart">Add to cart</button>-->
             </div>
           </div>
         </article>
 
-        <!-- Add more product-card elements as needed -->
       </section>
     </main>
 
-    <footer class="site-footer container">
-      <a href="index.html" class="brand small">Simple</a>
-      <p class="muted">© <span id="yearShop"></span> Simple</p>
-    </footer>
-    <div id="productModal" class="modal">
-      <div class="modal-content">
-        <h2>Product name</h2>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a href="index.html" class="brand small">Simple</a>
+        <p class="muted">© <span id="yearShop"></span> Simple</p>
       </div>
-    </div>
-    <div id="quickModal" class="modal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
+    </footer>
 
+    <!-- BUG FIX: removed unused orphan #productModal div -->
+
+    <!-- Quick View Modal -->
+    <div id="quickModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalName">
+      <div class="modal-content">
+        <span class="close-modal" role="button" aria-label="Close modal">&times;</span>
         <div class="modal-img">
           <img src="" alt="" id="modalImg" />
         </div>
-
         <h2 id="modalName"></h2>
         <p id="modalDesc"></p>
         <p class="modal-price" id="modalPrice"></p>
-
         <button class="btn primary add-cart">Add to cart</button>
       </div>
     </div>
